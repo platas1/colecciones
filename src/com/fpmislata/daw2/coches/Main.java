@@ -6,9 +6,9 @@ import java.util.Scanner;
 
 public class Main {
     
- Scanner sc = new Scanner(System.in);
-    
-    
+    public static Scanner stdin = new Scanner(System.in);
+
+   
    public static void main(String[] args){
     
         Coche Coche1 = new Coche("Leon",Marca.Seat,1800,"44867353g");
@@ -35,9 +35,9 @@ public class Main {
         
    }
   
-String dnipersona="44867353g";
-  //System.out.println("Introduce DNI: "+dnipersona);
- //  dnipersona=sc.next();
+//String dnipersona="44867353g";
+  System.out.println("Introduce DNI:");
+  String dnipersona=stdin.nextLine();
 
 for(Coche coche:coches){
     
