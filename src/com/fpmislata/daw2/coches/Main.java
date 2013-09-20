@@ -41,7 +41,7 @@ public class Main {
 
 for(Coche coche:coches){
     
-    if (dnipersona.equals(coche.getDniPropietario()))
+    if (dnipersona.equals(coche.getDniPropietario())) // if (coche.getMarca()==Marca.Ford)
 
        System.out.println("DNI encontrado:"+coche.getModelo()+coche.getMarca());
  
