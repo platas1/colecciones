@@ -8,6 +8,7 @@ public class Coche {
     private Marca marca;
     private int cilindrada;
     private String DniPropietario;
+    private Persona propietario;
     
     
  //Constructor
@@ -72,6 +73,22 @@ public class Coche {
      */
     public void setDniPropietario(String DniPropietario) {
         this.DniPropietario = DniPropietario;
+    }
+
+    
+    // Añado los accesores de persona
+    /**
+     * @return the propietario
+     */
+    public Persona getPropietario() {
+        return propietario;
+    }
+
+    /**
+     * @param propietario the propietario to set
+     */
+    public void setPropietario(Persona propietario) {
+        this.propietario = propietario;
     }
      
     

@@ -1,7 +1,11 @@
+// Utilizaremos en redmine y en la documentación la Sintaxis de markdown para los readme (.md)
+
 package com.fpmislata.daw2.coches;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
@@ -12,11 +16,12 @@ public class Main {
    public static void main(String[] args){
     
         Coche Coche1 = new Coche("Leon",Marca.Seat,1800,"44867353g");
-        Coche Coche2 = new Coche("Megane",Marca.Renault,1200,"98727353g");
+        Coche Coche2 = new Coche("Megane",Marca.Renault,1200,"12345678z");
         Coche Coche3 = new Coche("Fiesta",Marca.Ford,1100,"351867353g");
         Coche Coche4 = new Coche("Saxo",Marca.Citroen,1900,"21867353g");
         Coche Coche5 = new Coche("Mondeo",Marca.Ford,2100,"11867353g");
         
+           
         
    List<Coche> coches=new ArrayList<>();
   
@@ -61,7 +66,52 @@ for(Coche coche:coches){
         System.out.println("No hay coches de esa marca.");
 }
    
+
+Map<String,Coche> mapCoches=new HashMap<String,Coche>();
+
+mapCoches.put(Coche1.getDniPropietario(),Coche1);
+mapCoches.put(Coche2.getDniPropietario(),Coche2);
+mapCoches.put(Coche3.getDniPropietario(),Coche3);
+mapCoches.put(Coche4.getDniPropietario(),Coche4);
+mapCoches.put(Coche5.getDniPropietario(),Coche5);
   
+
+Coche cocheBuscado=mapCoches.get("12345678z");
+System.out.println(cocheBuscado.getModelo());
+System.out.println(cocheBuscado.getDniPropietario());
+System.out.println(cocheBuscado.getCilindrada());
+System.out.println(cocheBuscado.getMarca());
+
+for(String Coche:coches){    
+Coche coche=mapCoches.get(DniPropietario);
+
+System.out.println(""+coche.getMarca());
+}
+
+
+
+
+
+// Listas dentro de clases 
+
+             Persona persona1 = new Persona("Pepe","Garcia","448678452G");    // Creo el objeto persona
+ 
+             //Persona1 es de tipo Persona donde esta creado un arrayList de coches con sus correspondientes elementos
+             
+             Coche Coche6 = new Coche("MondeoPersona",Marca.Ford,2100,"33867353g"); // Creo el objeto coche6
+             Coche Coche7 = new Coche("MondeoPersonita",Marca.Ford,2100,"22867353g"); // Creo el objeto coche7
+
+             Coche6.setPropietario(persona1); //La propiedad persona de propietario apunta a la clasepersona
+                                              //donde se guardan todos los datos pertinentes.
+             Coche7.setPropietario(persona1); // Idem de lo anterior el coche7 tendra el mismo propietario
+               
+             List<Coche> cochesLista=persona1.getCoches();                       
+             cochesLista.add(Coche6);
+             cochesLista.add(Coche7);               
+
+             persona1.setCoches(coches);
+
+
     }
    
 }
