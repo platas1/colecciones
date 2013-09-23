@@ -22,6 +22,7 @@ public class Persona {
          this.Apellido1=apellido1;
       //   this.sexo=sexo;
          this.DNI=dni;
+     //    this.coches=new ArrayList<>() // Se puede poner el array en el constructor en vez de ponerlo como private
   }  
     
   

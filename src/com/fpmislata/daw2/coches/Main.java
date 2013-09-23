@@ -105,8 +105,8 @@ System.out.println(""+coche.getMarca());
                                               //donde se guardan todos los datos pertinentes.
              Coche7.setPropietario(persona1); // Idem de lo anterior el coche7 tendra el mismo propietario
                
-             List<Coche> cochesLista=persona1.getCoches();                       
-             cochesLista.add(Coche6);
+             List<Coche> cochesLista=persona1.getCoches();   //creamos cochesLista y le asignamos el valor del ArrayList de coches de persona1
+             cochesLista.add(Coche6);            // Añado los coches al array de personas que hemos asignado en cochesLista
              cochesLista.add(Coche7);               
 
              persona1.setCoches(coches);
