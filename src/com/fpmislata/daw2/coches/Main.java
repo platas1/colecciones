@@ -11,6 +11,7 @@ import java.util.Scanner;
 public class Main {
     
     public static Scanner stdin = new Scanner(System.in);
+    private static Iterable<String> cochesprop;
 
    
    public static void main(String[] args){
@@ -82,12 +83,20 @@ System.out.println(cocheBuscado.getDniPropietario());
 System.out.println(cocheBuscado.getCilindrada());
 System.out.println(cocheBuscado.getMarca());
 
-for(String Coche:coches){    
-Coche coche=mapCoches.get(DniPropietario);
+for(String Coche:cochesprop){    
+Coche cochespropi=mapCoches.getDniPropietario();
 
-System.out.println(""+coche.getMarca());
+System.out.println(""+cochespropi.getMarca());
+System.out.println(""+cochespropi.getModelo());
 }
 
+
+Coche personaBuscadaDNI=mapCoches.get("12345678z");
+System.out.println(personaBuscadaDNI.getModelo());
+
+
+Coche cocheBuscadoMarca=mapCoches.get("Ford");
+System.out.println(cocheBuscadoMarca.getMarca());
 
 
 
@@ -111,7 +120,8 @@ System.out.println(""+coche.getMarca());
 
              persona1.setCoches(coches);
 
-
-    }
+//!!!En clase persona creo un objeto coche. En el main inicializo coche1 con un get (persona.getCoche()) que apuntara al coche de persona.
+// Puedo ""igualar"" directamente objetos con coche1=coche2
+   }
    
 }
